@@ -13,8 +13,6 @@
 </template>
 
 <script>
-    // @ is an alias to /src
-    
     import landingLink from "@/components/LandingLink.vue"
     export default {
         name: 'Landing',

@@ -1,7 +1,7 @@
 <template>
     <main id="category">
         <div id="cover">
-            <img :src="require('@/assets/'+category.coverPhoto)" :alt="category.name">
+            <img :src="'/assets/' + category.coverPhoto" :alt="category.name">
             <div class="subCategories" v-if="category.hasSubCategories">
                 <h3>choose your categories:</h3>
                 <button v-for="subcat in subCats" :key="subcat.name" @click="flipSubActive(subcat)" :class="{'active':subcat.active}">{{subcat.name}}</button>

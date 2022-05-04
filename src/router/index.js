@@ -1,28 +1,20 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Landing from '../views/Landing.vue';
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: Landing,
+    component: () => import(/* webpackChunkName: "landing" */ '../views/Landing.vue'),
   },
   {
-    path: '/category',
+    path: '/category/:catName',
     name: 'Category',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Category.vue'),
+    component: () => import(/* webpackChunkName: "category" */ '../views/Category.vue'),
   },
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = new createRouter({
+  history: createWebHistory(),
   routes,
 });
 

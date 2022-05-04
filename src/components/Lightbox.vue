@@ -3,7 +3,7 @@
         <button class="close" @click="$emit('closeLightbox')">x</button>
         <img 
             :srcset="getSrcSet(list[listIndex])" 
-            :src="require('@/assets/'+list[listIndex]+'-3x.webp')" 
+            :src="'/assets/'+list[listIndex]+'-3x.webp'" 
             sizes="calc(100vh - 160px)"
             alt="photo">
         <p>{{Number(listIndex)+1}} of {{list.length}}</p>
@@ -24,11 +24,11 @@ export default {
     methods:{
          getSrcSet(path){
             console.log(path);
-            var str =  require('@/assets/'+path+'-1x.webp')+' 360w, ';
-                str += require('@/assets/'+path+'-2x.webp')+' 720w, ';
-                str += require('@/assets/'+path+'-3x.webp')+' 1080w, ';
-                str += require('@/assets/'+path+'-4x.webp')+' 1440w, ';
-                str += require('@/assets/'+path+'-7x.webp')+' 2520w';
+            var str =  '/assets/'+path+'-1x.webp 360w, ';
+                str += '/assets/'+path+'-2x.webp 720w, ';
+                str += '/assets/'+path+'-3x.webp 1080w, ';
+                str += '/assets/'+path+'-4x.webp 1440w, ';
+                str += '/assets/'+path+'-7x.webp 2520w';
             return str;
         }
     }
