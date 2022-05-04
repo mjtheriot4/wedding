@@ -28,3 +28,4 @@ coverage
 *.sw?
 .vscode
 public/assets/
+public_html/
