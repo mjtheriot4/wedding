@@ -3,7 +3,7 @@
         <img 
             :srcset="getSrcSet(category.landingPhoto)" 
             :sizes="width+'px'" 
-            :src="'/assets/' + category.landingPhoto + '-3x.webp'" 
+            :src="'https://micahandmary.com/assets/' + category.landingPhoto + '-3x.webp'" 
             :alt="alt">
         <h2>{{category.name}}</h2>
     </router-link>
@@ -22,11 +22,11 @@ export default {
     methods:{
         getSrcSet(path){
             console.log(path);
-            var str =  '/assets/'+path+'-1x.webp 360w, ';
-                str += '/assets/'+path+'-2x.webp 720w, ';
-                str += '/assets/'+path+'-3x.webp 1080w, ';
-                str += '/assets/'+path+'-4x.webp 1440w, ';
-                str += '/assets/'+path+'-7x.webp 2520w';
+            var str =  'https://micahandmary.com/assets/'+path+'-1x.webp 360w, ';
+                str += 'https://micahandmary.com/assets/'+path+'-2x.webp 720w, ';
+                str += 'https://micahandmary.com/assets/'+path+'-3x.webp 1080w, ';
+                str += 'https://micahandmary.com/assets/'+path+'-4x.webp 1440w, ';
+                str += 'https://micahandmary.com/assets/'+path+'-7x.webp 2520w';
             return str;
         }
     }

@@ -16,7 +16,22 @@
     import landingLink from "@/components/LandingLink.vue"
     export default {
         name: 'Landing',
-        components: {landingLink}
+        components: {landingLink},
+        // mounted(){
+        //     let promises = [
+        //         fetch('https://micahandmary.com/assets/girlprep/girlprep8-1x.webp'),
+        //         fetch('https://micahandmary.com/assets/girlprep/girlprep7-1x.webp'),
+        //         fetch('https://micahandmary.com/assets/girlprep/girlprep6-1x.webp'),
+        //     ]
+        //     let objects = promises.map(() => false);
+        //     promises.forEach((p,i) => {
+        //         p.then(makeBlob, noNetwork).then().catch(err => alert(err))
+        //     })
+        //     let noNetwork = () => {throw 'no network!'};
+        //     let noImg = () => {throw 'no img!'};
+        //     let makeBlob = res => r.ok ? reject() : resolve(res.blob());
+        //     let save = blob =>  
+        // }
     }
 </script>
 <style lang="scss">

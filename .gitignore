@@ -29,3 +29,6 @@ coverage
 .vscode
 public/assets/
 public_html/
+
+.DS_Store
+**/.DS_Store
